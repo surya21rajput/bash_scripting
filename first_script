@@ -1,0 +1,16 @@
+#!/bin/bash
+
+<<note
+  This is the first shell scripting for practice
+note
+
+echo "Enter your name "
+
+read name
+
+echo "My name is $name "
+
+echo "What is your name?"
+read name2
+
+echo "My name is $name2"

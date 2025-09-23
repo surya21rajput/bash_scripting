@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# This script demonstrates an if-elif-else condition
+# based on the Thor's hammer story.
+
+read -p "Enter Thor's dialogue: " th
+read -p "Did the hammer come back? (yes/no) " yn
+
+echo "$th"
+echo "$yn"
+
+if [[ "$yn" == "yes" ]]; then
+    echo "I am still worthy."
+else
+    read -p "Who lifted the hammer? " lh
+    if [[ "$lh" == "captain" ]]; then
+        echo "Amazing!"
+    else
+        echo "You are not worthy."
+    fi
+fi
+
+echo "The fight is over."

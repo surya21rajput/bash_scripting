@@ -1,0 +1,20 @@
+# Part 2: Interactive Character Counter Loop
+
+while true; do
+    # Prompt the user for input
+    read -p "Enter a line of text (Press Enter without text to exit): " user_input
+
+    # Check if the input is empty (user just pressed Enter)
+    if [ -z "$user_input" ]; then
+        echo "Exiting the Interactive Explorer. Goodbye!"
+        break # Exit the while loop
+    fi
+
+    # Calculate the character count.
+    # We use 'echo -n' to prevent a newline character from being counted.
+    # The 'wc -m' command counts characters.
+    char_count=$(echo -n "$user_input" | wc -m | tr -d ' ')
+
+    echo "Character Count: $char_count"
+    echo ""
+done
